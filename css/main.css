@@ -1,3 +1,12 @@
+header {
+  width: 90%;
+}
+.container .main-inner {
+  width: 90%;
+}
+.content-wrap {
+  width: calc(100% - 260px);
+}
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif; /* 1 */
@@ -1823,7 +1832,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0e536a;
+  background: #6bff3b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2620,6 +2629,7 @@ pre .javascript .function {
   background: #fff;
   box-shadow: initial;
   border-radius: initial;
+  background: rgba(255,255,255,0.7);
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -2680,6 +2690,7 @@ pre .javascript .function {
   min-height: 700px;
   box-shadow: initial;
   border-radius: initial;
+  background: rgba(255,255,255,0.85);
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .content-wrap {
@@ -2852,6 +2863,7 @@ pre .javascript .function {
   margin-left: -100%;
   right: auto;
   bottom: auto;
+  background: rgba(255,255,255,0.7);
   -webkit-transform: none;
 }
 .sidebar-inner {
@@ -2861,6 +2873,7 @@ pre .javascript .function {
   background: #fff;
   box-shadow: initial;
   border-radius: initial;
+  background: rgba(255,255,255,0.7);
   opacity: 0;
 }
 .sidebar-inner.affix {
@@ -2990,4 +3003,27 @@ pre .javascript .function {
   .post-body {
     text-align: justify;
   }
+}
+#days {
+  display: block;
+  color: #07b39b;
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: center;
+}
+body::before {
+  background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1578478370010&di=4f2ce8ca073e9bdad9bc9f7c25334d0d&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F584e0d4f485ae.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  content: " ";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.site-meta {
+  background: #0684bd;
 }
