@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="ECMAScript脚本语言 &#x3D; 网景公司+微软公司）强类型定义语言：　　强制数据类型定义的语言。也就是说，一旦一个变量被指定了某个数据类型，如果不经过强制转换，那么它就永远是这个数据类型了。举个例子：如果你定义了一个整型变量a,那么程序根本不可能将a当作字符串类型处理。强类型定义语言是类型安全的语言。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS+JQ">
+<meta property="og:url" content="https://github.com/bohexin/bohexin.github.io/2022/02/12/page-1/index.html">
+<meta property="og:site_name" content="薄荷芯">
+<meta property="og:description" content="ECMAScript脚本语言 &#x3D; 网景公司+微软公司）强类型定义语言：　　强制数据类型定义的语言。也就是说，一旦一个变量被指定了某个数据类型，如果不经过强制转换，那么它就永远是这个数据类型了。举个例子：如果你定义了一个整型变量a,那么程序根本不可能将a当作字符串类型处理。强类型定义语言是类型安全的语言。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-12T09:52:20.000Z">
+<meta property="article:modified_time" content="2022-02-12T10:00:26.324Z">
+<meta property="article:author" content="薄荷♥">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://github.com/bohexin/bohexin.github.io/2022/02/12/page-1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>JS+JQ | 薄荷芯</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">薄荷芯</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://github.com/bohexin/bohexin.github.io/2022/02/12/page-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="薄荷♥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="薄荷芯">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JS+JQ
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-02-12 17:52:20 / Modified: 18:00:26" itemprop="dateCreated datePublished" datetime="2022-02-12T17:52:20+08:00">2022-02-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>ECMAScript脚本语言 &#x3D; 网景公司+微软公司<br>）强类型定义语言：<br>　　强制数据类型定义的语言。也就是说，一旦一个变量被指定了某个数据类型，如果不经过强制转换，那么它就永远是这个数据类型了。举个例子：如果你定义了一个整型变量a,那么程序根本不可能将a当作字符串类型处理。强类型定义语言是类型安全的语言。</p>
+<span id="more"></span>
+<p>2）弱类型定义语言：<br>　　数据类型可以被忽略的语言。它与强类型定义语言相反, 一个变量可以赋不同数据类型的值。<br>强类型定义语言在速度上可能略逊色于弱类型定义语言，但是强类型定义语言带来的严谨性能够有效的避免许多错误。另外，“这门语言是不是动态语言”与“这门语言是否类型安全”之间是完全没有联系的！<br>Var 可以定义多个类型</p>
+<p>Dom 对元素进行操作</p>
+<p>Bom对浏览器进行操作</p>
+<p>变量</p>
+<p> .</p>
+<p>简单数据类型</p>
+<p>Numeber<br>0不算个数<br>前面加0八进制<br>前面加0x十六进制</p>
+<p>字符类型</p>
+<p>Js \b转义符</p>
+<p>Css换行\br  \b加粗 \i斜体</p>
+<p>布尔型 与数字类型相加true为数值1 false为数值0</p>
+<p>Undefined</p>
+<p>Prompt（‘’） 输出为字符类型 prompt 括号里加引号<br>转换为字符串</p>
+<p>转换数字型</p>
+<p>parseInt（） 需要开头为整数 函数里变量不需加引号</p>
+<p>转换布尔型<br>带表false的其他类型值</p>
+<p>解释型语言和编译型语言</p>
+<p>标识符</p>
+<p>运算符</p>
+<p>浮点数直接运算会有问题</p>
+<p>表达式</p>
+<p>递增递减</p>
+<p>&#x3D; 赋值<br>&#x3D;&#x3D;会把字符串型的数据转换为数字型 只要求值一致</p>
+<p>&#x3D;&#x3D;&#x3D;全等要求数据类型完全一致 值也一致</p>
+<p>逻辑运算符</p>
+<p>&amp;&amp; and 与<br>|| 或 or<br>！ 非</p>
+<p>短路运算符<br>&amp;&amp;</p>
+<p>||</p>
+<p>赋值运算符</p>
+<p>运算符优先级</p>
+<p>Js流程控制</p>
+<p>多分支语句</p>
+<p> 只执行一个语句<br>三元表达式</p>
+<p>表达式结果赋值变量 变量保存结构 var 变量&#x3D;(表达式 ? 表达式1 : 表达式2)<br>Switch语句 </p>
+<p>拿表达式的值跟case去匹配 switch（放变量）注意事项:</p>
+<p>For循环</p>
+<p>断点调试</p>
+<p>追加字符串</p>
+<p>打印n行n列</p>
+<p>Js 99乘法表</p>
+<p>While 循环</p>
+<p>执行复杂的条件判断<br>Do while</p>
+<p>Continue 关键字<br>退出当前次的循环直接跳入i++</p>
+<p>Break</p>
+<p>数组</p>
+<p>创建数组</p>
+<p>储存数据类型没有限制<br>获取数组元素</p>
+<p>遍历数组<br>Arr.length 动态监测数组长度</p>
+<p>求数组最大值</p>
+<p>数组新增元素</p>
+<p>筛选数组<br>定义新数组</p>
+<p>.length<br> 数组去重</p>
+<p>添加删除数组<br> unshift() 组前,push()组后</p>
+<p>Pop()删除最后一个</p>
+<p>Shift()删除第一个</p>
+<p>Arguments的使用</p>
+<p>里面存储了所有传递的实参<br>函数实现数组翻转</p>
+<p>数组翻转   变量名.reverse()</p>
+<p>数组排序 变量名.soft()</p>
+<p>返回数组索引</p>
+<p>IndexOf（）只能返回第一个<br>数组去重</p>
+<p>数组变成字符串<br>数组名.toString()<br>数组名.join()</p>
+<p>冒泡排序</p>
+<p>根据索引号判断 i为索引号<br>交换两个变量<br>  var arr &#x3D; [5, 4, 3, 2, 1];<br>    for (i &#x3D; 0; i &lt;&#x3D; arr.length - 1; i++) {<br>        for (var j &#x3D; 0; j &lt;&#x3D; arr.length - i - 1; j++) {<br>            if (arr[j] &gt; arr[j + 1]) {<br>                var temp &#x3D; arr[j];<br>                arr[j] &#x3D; arr[j + 1];<br>                arr[j + 1] &#x3D; temp;<br>            }<br>        }<br>函数的使用</p>
+<p>调用函数</p>
+<p> </p>
+<p>函数形参实参</p>
+<p>函数的返回值return</p>
+<p>Return后的代码不会被执行</p>
+<p>实现多个可以利用数组<br>函数有return返回后面的值，没有返回undefined</p>
+<p>函数封装<br>实现冒泡排序</p>
+<p>函数可以调用</p>
+<p>判断二月天数</p>
+<p>函数的两种声明方式</p>
+<p>Js<br>变量作用域</p>
+<p>全局变量</p>
+<p>局部变量</p>
+<p>全局变量和局部变量区别</p>
+<p>Js没有块级作用域</p>
+<p>Js作用域链</p>
+<p>根据目标出发一级一级往上<br>Js预解析<br>1 变量提升 把所有变量声明提升到当前作用域最前面 不提升赋值操作<br>2 函数提升 就是把所有函数声明提升到当前作用域的最前面 不调用函数<br>Js引擎会把 var function 放到当前作用域的最前面<br>代码执行按照代码执行顺序从上往下<br>对象</p>
+<p>转换对象</p>
+<p>创建对象</p>
+<ol>
+<li>利用字面量去创建{}</li>
+</ol>
+<p>方法跟匿名函数里面用，隔开<br>使用对象<br>调用对象的属性 我们采取 对象名.属性名</p>
+<p>Obj[‘’]</p>
+<p>调用对象方法 对象名.方法 需要加小括号</p>
+<ol start="2">
+<li><p>利用new object 创建对象</p>
+</li>
+<li><p>利用构造函数创建对象<br>构造函数首字母要大写<br>构造函数不需要return就可以返回结果<br>调用构造函数必需使用new</p>
+</li>
+</ol>
+<p>调用函数返回的是个对象<br> new 创建新实例<br>  遍历对象属性<br>For in</p>
+<p>Js对象</p>
+<p>内置对象</p>
+<p>查文档<br>MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/">https://developer.mozilla.org/zh-CN/</a><br>随机点名</p>
+<p>Var date &#x3D; new Date（）;<br>Data 为构造函数需要实例<br>获取data的总毫秒 （时间戳）</p>
+<p>倒计时</p>
+<p> 数组创建两种<br>字面量创建<br>Var arr &#x3D; [];<br>内置函数<br>Var ary &#x3D; new Array();</p>
+<p>检查是否为数组：</p>
+<p>参数 Instanceof Array</p>
+<p>字符串对象<br>基本包装类型 把简单数据类型包装简单数据类型</p>
+<p>字符串的不可变性</p>
+<p>查找字符出现次数</p>
+<p>根据索引号返回字符</p>
+<p>判断对象是否 有该属性:对象[‘属性名’] </p>
+<p>统计最多出现字符数</p>
+<p>字符串的操作方法</p>
+<p>Substr</p>
+<p>替换字符 replace<br>只替换第一个字符</p>
+<p>替换所有字符</p>
+<p>把字符转换成数组</p>
+<p>转换大小写</p>
+<p>简单类型和复杂类型</p>
+<p>值为null 返回空对象<br>堆和栈</p>
+<p> 。 </p>
+<p>简单数据类型传参</p>
+<p>复杂数据类型传参</p>
+<p>P把地址赋值给了x</p>
+<p>Web API</p>
+<p>DOM</p>
+<p>根据id获取元素</p>
+<p>根据标签名获取</p>
+<p>通过html5新方法获取</p>
+<p>QuerySelector 需要加符号 id + . class + # 只能过得到第一个元素对象<br>特殊  body html 元素</p>
+<p>事件三要素<br>事件源         事件触发对象 谁 按钮<br>事件类型       如何触发 什么事件 鼠标点击（onclick）经过 键盘按下<br>事件处理程序   通过函数赋值的方式 完成</p>
+<p>鼠标事件</p>
+<p>操作元素</p>
+<p>InnerText 不识别html标签<br>InnerHtml 符合w3c标准</p>
+<p> Input表单</p>
+<p>仿京东隐藏密码</p>
+  <div class="box">
+        <label for=""><p class="glyphicon glyphicon-eye-close" id="eye"></p></label>
+        <input type="password" name="" id="pwd">
+    </div>
+    <script>
+        var flag = 0;
+        var eye = document.getElementById('eye');
+        var pwd = document.getElementById('pwd');
+        eye.onclick = function() {
+            if (flag == 0) {
+                pwd.type = 'text';
+                flag = 1;
+                eye.className = 'glyphicon glyphicon-eye-open';
+            } else {
+                pwd.type = 'password';
+                flag = 0;
+                eye.className = 'glyphicon glyphicon-eye-close'
+            }
+        }
+    </script>
+样式操作
+ 
+ 
+<p>Element.style 样式较少情况下使用<br>Element.className 样式较多情况下使用<br>精灵图遍历背景图片</p>
+<p>显示隐藏文本框内容</p>
+<p>Dom操作元素属性</p>
+<p>排他思想</p>
+<p>换肤效果</p>
+<p>隔行变色<br>  表单全选<br>   var j_cbAll &#x3D; document.getElementById(‘j_cbAll’)<br>        var j_tbs &#x3D; document.getElementById(‘j_tb’).getElementsByTagName(‘input’)<br>        j_cbAll.onclick &#x3D; function() {<br>            for (var i &#x3D; 0; i &lt; j_tbs.length; i++) {<br>                j_tbs[i].checked &#x3D; this.checked</p>
+<pre><code>        &#125;
+    &#125;
+    for (var i = 0; i &lt; j_tbs.length; i++) &#123;
+        j_tbs[i].onclick = function() &#123;
+            var flag = true;
+            for (var i = 0; i &lt; j_tbs.length; i++) &#123;
+                if (!j_tbs[i].checked) &#123;
+                    flag = false
+                &#125;
+            &#125;
+            j_cbAll.checked = flag
+        &#125;
+    &#125;
+</code></pre>
+<p>自定义属性的操作<br>获取属性值</p>
+<p>设置属性</p>
+<p>移除属性</p>
+<p>Tab栏切换</p>
+<p>H5自定义属性<br>都由data开头</p>
+<p>获取自动义属性</p>
+<p>Dataset 只能获取data 开头的 有兼容性问题<br>节点操作</p>
+<p>.parentNode</p>
+<p>子节点</p>
+<p>  下拉菜单效果</p>
+<p>兄弟节点</p>
+<p>Node.nextElementSibling 有兼容性问题</p>
+<p>封装函数实现兼容性<br>c<br>创建节点</p>
+<p>先创建 后添加</p>
+<p>通过父级添加<br>通过子级添加</p>
+<p>简单留言板</p>
+<p>删除节点</p>
+<p>删除留言板</p>
+<p>克隆节点<br>内容为true 复制标签和里面内容<br>选取父元素<br>克隆子元素<br>添加进父元素</p>
+<p>动态生成表格 p753<br>三种动态创建元素</p>
+<p>Dom</p>
+<p>通过dom获取过来的为对象</p>
+<p>增<br>Appendchild 后面添加<br>InsertBefore前面添加<br>删<br>Removechild<br>改</p>
+<p>事件高级<br>AddEventListeners事件监听方式</p>
+<p>AttachEvent ie9独有</p>
+<p>处理事件监听兼容性问题</p>
+<p>删除事件</p>
+<p>Dom事件流</p>
+<p>事件对象</p>
+<p>兼容性问题</p>
+<p>E．Target触发元素指向点击对象<br>This 指向问题<br>无调用指向windows</p>
+<p>方法谁调用指向谁</p>
+<p>构造函数指向调用对象</p>
+<p>This指向绑定事件</p>
+<p>阻止默认行为</p>
+<p>阻止冒泡事件</p>
+<p>事件委托</p>
+<p>禁止鼠标右键菜单</p>
+<p>鼠标事件对象信息<br>Page</p>
+<p>鼠标跟图片移动</p>
+<p>键盘事件</p>
+<p>Js dom操作原理能够使JavaScript操作Html，JavaScript就有了一套自己的dom编程接口。<br>•    对于Html，dom使得html形成一棵dom树，类似于一颗家族树一样，一层接一层，子子孙孙。<br>html标签通过浏览器的解析后才会形成dom树，此后HTML中的每个标签元素，属性，文本都能看做是一个DOM的节点，JavaScript都能通过dom的提供的编程接口操作到每个节点，去了解浏览器的渲染机制能够帮助我们了解dom </p>
+<p>KeyCode判断用户按键<br> 模拟京东快递单号查询</p>
+<p>BOM</p>
+<p>Bom构成<br>全局作用域的函数变为windows属性 函数变为方法</p>
+<p>页面加载事件</p>
+<p>调整窗口大小事件<br>先onload加载整个文档后执行</p>
+<p>定时器</p>
+<p>自动关闭广告</p>
+<p>停止定时器</p>
+<p>反复调用定时器</p>
+<p>短信发送</p>
+<p>Js执行机制</p>
+<p>同步与异步</p>
+<p>点击之后异步进程将异步程序放入消息队列 主程序看到消息队列将消息队列放入主线栈执行<br>Location对象</p>
+<p>5秒之后跳转页面</p>
+<p>Location常见方法</p>
+<p>Navigator对象</p>
+<p>History对象</p>
+<p>网页特效<br>元素偏移量</p>
+<p>获得鼠标在盒子内的坐标</p>
+<p>模态框</p>
+<p>P807<br>京东放大镜效果<br>P810<br>元素可视区 Client系列</p>
+<p>立即执行函数</p>
+<p>（function（）{}（））避免命名冲突<br>元素scroll属性</p>
+<p>仿淘宝固定侧边栏</p>
+<p>元素被卷e. scrollTop 页面w.pageYOffset</p>
+<p>Mouseenter</p>
+<p>动画实现原理</p>
+<p>缓动动画<br>function animate(obj, target, callback) {<br>    clearInterval(obj.timer);<br>    obj.timer &#x3D; setInterval(function() {<br>        var step &#x3D; (target - obj.offsetLeft) &#x2F; 10;<br>        step &#x3D; step &gt; 0 ? Math.ceil(step) : Math.floor(step);<br>        if (obj.offsetLeft &#x3D;&#x3D; target) {<br>            clearInterval(obj.timer)<br>            if (callback) {<br>                callback();<br>            }<br>        }<br>        obj.style.left &#x3D; obj.offsetLeft + step + ‘px’<br>    }, 15)<br>} </p>
+<p>轮播图</p>
+<p>window.addEventListener(‘load’, function() {</p>
+<pre><code>var arrow_l = this.document.querySelector(&#39;.arrow-l&#39;)
+var arrow_r = this.document.querySelector(&#39;.arrow-r&#39;)
+var focus = document.querySelector(&#39;.focus&#39;)
+var focusWidth = focus.offsetWidth;
+focus.addEventListener(&#39;mouseenter&#39;, function() &#123;
+    arrow_l.style.display = &#39;block&#39;;
+    arrow_r.style.display = &#39;block&#39;;
+    clearInterval(timer);
+    timer = null;
+
+&#125;)
+focus.addEventListener(&#39;mouseleave&#39;, function() &#123;
+    arrow_l.style.display = &#39;none&#39;;
+    arrow_r.style.display = &#39;none&#39;;
+    timer = setInterval(function() &#123;
+        arrow_r.click();
+    &#125;, 2000)
+
+&#125;)
+var ul = focus.querySelector(&#39;ul&#39;)
+var ol = focus.querySelector(&#39;ol&#39;)
+for (var i = 0; i &lt; ul.children.length; i++) &#123;
+    var li = this.document.createElement(&#39;li&#39;)
+    li.setAttribute(&#39;index&#39;, i)
+    ol.appendChild(li)
+    li.addEventListener(&#39;mouseover&#39;, function() &#123;
+        for (var i = 0; i &lt; ol.children.length; i++) &#123;
+            ol.children[i].className = &#39;&#39;;
+        &#125;
+        this.className = &#39;current&#39;;
+        var index = this.getAttribute(&#39;index&#39;)
+        num = index;
+        cicrle = index;
+        console.log(focusWidth)
+        console.log(index)
+        animate(ul, -index * focusWidth, )
+    &#125;)
+&#125;
+ol.children[0].className = &#39;current&#39;;
+var first = ul.children[0].cloneNode(true);
+ul.appendChild(first);
+var num = 0;
+var cicrle = 0;
+arrow_r.addEventListener(&#39;click&#39;, function() &#123;
+    if (num == ul.children.length - 1) &#123;
+        ul.style.left = 0;
+        num = 0;
+    &#125;
+    num++;
+    animate(ul, -num * focusWidth);
+    cicrle++;
+    if (cicrle == ol.children.length) &#123;
+        cicrle = 0;
+    &#125;
+    for (var i = 0; i &lt; ol.children.length; i++) &#123;
+        ol.children[i].className = &#39;&#39;;
+
+    &#125;
+    ol.children[cicrle].className = &#39;current&#39;
+&#125;);
+
+arrow_l.addEventListener(&#39;click&#39;, function() &#123;
+    if (num == 0) &#123;
+        num = ul.children.length - 1;
+        ul.style.left = -num * focusWidth + &#39;px&#39;;
+    &#125;
+    num--;
+    animate(ul, -num * focusWidth);
+    cicrle--;
+    if (cicrle &lt; 0) &#123;
+        cicrle = ol.children.length - 1;
+    &#125;
+    for (var i = 0; i &lt; ol.children.length; i++) &#123;
+        ol.children[i].className = &#39;&#39;;
+
+    &#125;
+    ol.children[cicrle].className = &#39;current&#39;
+&#125;)
+var timer = setInterval(function() &#123;
+    arrow_r.click();
+&#125;, 2000)
+</code></pre>
+<p>})</p>
+<p> 手动调用事件 </p>
+<p>节流阀</p>
+<p>短路运算符</p>
+<p>如果callbcak为true 调用callback（）；<br>带有动画返回顶部<br>Windows.scroll(x,y) 返回指定页面 滚动<br>筋斗云p846<br>移动端特效<br>触屏事件</p>
+<p>触摸事件对象</p>
+<p>移动端拖动盒子</p>
+<p>Flag &#x3D; false</p>
+<p>e.preventDefault()阻止滚动屏幕<br>Flag &#x3D; true</p>
+<p>If(flag){}<br>ClassList<br>添加<br>移除<br>Toggle 有删减 无添加</p>
+<p>返回顶部模块</p>
+<p>Click延时解决方案</p>
+<p>Fastclick使用解决延迟</p>
+<p>Swiper使用<a target="_blank" rel="noopener" href="https://swiper.com.cn/">https://swiper.com.cn</a></p>
+<p>视频播放zy.media.js<br>移动端开发框架</p>
+<p>Bootstrap</p>
+<p>本地存储</p>
+<p>Js库</p>
+<p>Jqery</p>
+<p>Jquery入口函数使用<br>$</p>
+<p>Dom对象  jquery对象的转换</p>
+<p>Jquery选择器</p>
+<p>Jquery隐式迭代</p>
+<p>Jquery筛选选择器</p>
+<p>Jquery排他</p>
+<p>链式编程</p>
+<p>jquery操作css样式<br> 、设置样式</p>
+<p>Jquery效果</p>
+<p>fadeTo（）修改透明度</p>
+<p>事件切换</p>
+<p>动画停止</p>
+<p>自定义动画</p>
+<p>手风琴效果<br>P900<br>设置或者获取固定属性</p>
+<p>购物车全选p902</p>
+<p>引入顺序</p>
+<p>Jquery内容文本值获取</p>
+<p>获取表单value属性.val()</p>
+<p>购物车增减商品数量</p>
+<p>ToFixed（2）保留两位小数<br>Jquery元素操作<br>Jquery遍历数组</p>
+<p>对数据遍历</p>
+<p>jQuery创建元素</p>
+<p>添加</p>
+<p>Jquery尺寸操作</p>
+<p>封装成对象</p>
+<p>获取被卷去的头部</p>
+<p>返回顶部</p>
+<p>电梯导航</p>
+<p>互斥锁 同 节流阀<br>Jquery事件处理</p>
+<p>事件委托</p>
+<p>利用冒泡<br>删除创建元素需要用on动态绑定事件</p>
+<p>事件解绑</p>
+<p>Jquery自动触发事件</p>
+<p>Jqury事件对象</p>
+<p>拷贝对象</p>
+<p>多库共存jquery</p>
+<p>jQuery插件使用</p>
+<p>图片懒加载</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/02/12/page/" rel="prev" title="html+CSS学习过程">
+      <i class="fa fa-chevron-left"></i> html+CSS学习过程
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/02/12/ajax/" rel="next" title="初步认识ajax">
+      初步认识ajax <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">薄荷♥</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">薄荷♥</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
